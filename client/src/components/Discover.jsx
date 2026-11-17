@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { api } from '../api.js';
 import SwipeCard from './SwipeCard.jsx';
+import DiscoverMore from './DiscoverMore.jsx';
 
 export default function Discover() {
   const [view, setView] = useState('swipe'); // 'swipe' | 'matches'
@@ -113,6 +114,7 @@ export default function Discover() {
       )}
 
       {error && status === 'ready' && <p className="error">{error}</p>}
+            <DiscoverMore />
 
       {match && (
         <MatchModal
